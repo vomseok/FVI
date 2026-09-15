@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "crs": "EPSG:5186",
+  "analysis_grid": {
+    "resolution_m": 30,
+    "alignment": "snap_to_topography_raster",
+    "resampling": {
+      "continuous": "bilinear",
+      "categorical": "nearest"
+    }
+  },
+  "sensitivity_grid": {
+    "resolution_m": 10,
+    "purpose": "Resolution sensitivity only; do not treat an upsampled 30 m input as independent high-resolution information."
+  },
+  "boundary_tolerance_m": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "burn_label": {
+    "positive_class": "physical burned-land area within the validation window",
+    "negative_class": "unburned cells sampled from the same validation window"
+  },
+  "evaluation": {
+    "random_seed": 20250322,
+    "negative_to_positive_ratio": 1,
+    "notes": "Use spatial block sampling when sufficient independent fire events or spatial blocks are available."
+  }
+}

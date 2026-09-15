@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Pre-specified factor-weight sensitivity analysis for the physical fire hazard index.",
+  "index_interpretation": "The index is a relative physical fire hazard/susceptibility layer, not a full IPCC vulnerability or risk assessment.",
+  "scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "name": "base_ahp",
+      "description": "AHP-documented base specification used in the revised manuscript.",
+      "weights": {
+        "topography": 0.3,
+        "meteorology": 0.3,
+        "fuel": 0.4
+      }
+    },
+    {
+      "scenario_id": "scenario_02",
+      "name": "terrain_weather_emphasis",
+      "description": "Conservative alternative that increases terrain and event-weather influence while reducing fuel influence.",
+      "weights": {
+        "topography": 0.35,
+        "meteorology": 0.35,
+        "fuel": 0.3
+      }
+    },
+    {
+      "scenario_id": "scenario_03",
+      "name": "fuel_emphasis",
+      "description": "Alternative that increases fuel influence to test sensitivity to land-cover-based flammability ranking.",
+      "weights": {
+        "topography": 0.25,
+        "meteorology": 0.25,
+        "fuel": 0.5
+      }
+    }
+  ],
+  "quality_checks": {
+    "weights_must_sum_to": 1.0,
+    "allowed_absolute_rounding_error": 1e-09
+  }
+}
