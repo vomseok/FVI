@@ -1,0 +1,13 @@
+{
+  "execution_status": "not_executed",
+  "reason": "Original normalized factor rasters, raw meteorological observations, and a verified burn label/perimeter are unavailable in the current workspace.",
+  "allowed_action": "Replace only by running analysis_code/sensitivity_analysis.py with documented real input data.",
+  "manuscript_reference_values_not_recomputed_here": {
+    "auc_roc": 0.602,
+    "base_weights": {
+      "topography": 0.3,
+      "meteorology": 0.3,
+      "fuel": 0.4
+    }
+  }
+}

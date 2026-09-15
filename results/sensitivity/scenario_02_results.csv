@@ -1,0 +1,2 @@
+scenario_id,scenario_name,execution_status,reason,topography_weight,meteorology_weight,fuel_weight,fuel_perturbation_fraction,valid_cells,burned_cells,auc_roc,auc_pr,youden_threshold,sensitivity,specificity,youden_j
+scenario_02,terrain_weather_emphasis,not_executed,original factor rasters and verified burn label unavailable,0.35,0.35,0.3,,,,,,,,,,
