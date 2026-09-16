@@ -1,0 +1,3 @@
+resolution_m,execution_status,reason,valid_cells,burned_cells,auc_roc,auc_pr,interpretation
+30,not_executed,Original FVI raster and verified burn perimeter unavailable,,,,,
+10,not_executed,Original FVI raster and verified burn perimeter unavailable,,,,,

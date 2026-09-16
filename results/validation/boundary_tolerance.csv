@@ -1,0 +1,5 @@
+boundary_tolerance_m,execution_status,reason,valid_cells,burned_cells,auc_roc,auc_pr
+0,not_executed,Original FVI raster and verified burn perimeter unavailable,,,,
+30,not_executed,Original FVI raster and verified burn perimeter unavailable,,,,
+60,not_executed,Original FVI raster and verified burn perimeter unavailable,,,,
+90,not_executed,Original FVI raster and verified burn perimeter unavailable,,,,

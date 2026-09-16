@@ -1,0 +1,21 @@
+{
+  "execution_status": "not_executed",
+  "reason": "No original 30 m FVI raster or verified burned-land polygon was available at package assembly.",
+  "required_inputs": [
+    "scenario_01_fvi.tif",
+    "burn_perimeter.gpkg"
+  ],
+  "configured_tests": {
+    "grid_resolution_m": [
+      30,
+      10
+    ],
+    "boundary_tolerance_m": [
+      0,
+      30,
+      60,
+      90
+    ]
+  },
+  "important_note": "The 10 m comparison must be interpreted as resampling sensitivity unless independent 10 m source data are supplied."
+}
