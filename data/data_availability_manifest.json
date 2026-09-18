@@ -1,0 +1,100 @@
+{
+  "package_name": "FVI reanalysis source-data package",
+  "created_at_utc": "2026-09-18T05:06:00Z",
+  "analysis_specification": {
+    "target_crs": "EPSG:5186",
+    "target_resolution_m": 30,
+    "study_event": "March 2025 Gyeongsangbuk-do wildfire",
+    "execution_status": "blocked_by_missing_empirical_inputs"
+  },
+  "status_definitions": {
+    "included": "The physical file is present and its provenance/integrity is recorded.",
+    "requires_user_download": "An official, login, request, or permission step is needed before the data can be obtained.",
+    "required_not_available": "Required for empirical analysis but not found in approved local locations or included here.",
+    "source_access_documented": "A public source path was verified, but no analysis-ready data is included because it is non-georeferenced, restricted, or lacks redistribution clearance."
+  },
+  "assets": [
+    {
+      "id": "dem_srtm_n36e128",
+      "role": "topography_source",
+      "path": "dem/srtm_1arcsec/N36E128.hgt.gz",
+      "status": "included",
+      "format": "SRTM 1 arc-second HGT gzip; 25,934,402 bytes after decompression",
+      "source_url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N36/N36E128.hgt.gz",
+      "sha256": "6d38ba8e9dd7737c4c48bf2e348e96857315076cc39b21439ffbe104b1cc80d0",
+      "license_and_attribution": "SRTM data courtesy of the U.S. Geological Survey; see AWS Terrain Tiles attribution guidance: https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "required_processing": "Decompress; mosaic as needed; reproject to EPSG:5186; align to a 30 m common grid; derive elevation/slope/aspect under documented rules; normalize to 0–100."
+    },
+    {
+      "id": "dem_srtm_n36e129",
+      "role": "topography_source",
+      "path": "dem/srtm_1arcsec/N36E129.hgt.gz",
+      "status": "included",
+      "format": "SRTM 1 arc-second HGT gzip; 25,934,402 bytes after decompression",
+      "source_url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N36/N36E129.hgt.gz",
+      "sha256": "d643bf2de4344e6972fbe8c30c11f8b3f51b432e150553d6a90241b056fc76f2",
+      "license_and_attribution": "SRTM data courtesy of the U.S. Geological Survey; see AWS Terrain Tiles attribution guidance: https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "required_processing": "Decompress; mosaic as needed; reproject to EPSG:5186; align to a 30 m common grid; derive elevation/slope/aspect under documented rules; normalize to 0–100."
+    },
+    {
+      "id": "medium_landcover",
+      "role": "fuel_source",
+      "path": "landcover/",
+      "status": "requires_user_download",
+      "official_source": "https://aid.mcee.go.kr/req/intro.do",
+      "access_note": "Official guidance requires logged-in online request/download; restricted data may require an official letter and in-person receipt.",
+      "required_processing": "Select study-area tiles and closest documented production year; record license/classification codes; rasterize to the common 30 m grid; apply config/fuel_scores.csv."
+    },
+    {
+      "id": "asos_aws_event_2025",
+      "role": "meteorology_source_event",
+      "path": "meteorology/event_2025/",
+      "status": "requires_user_download",
+      "official_sources": [
+        "https://data.kma.go.kr/data/grnd/selectAsosRltmList.do",
+        "https://data.kma.go.kr/data/grnd/selectAwsRltmList.do"
+      ],
+      "required_processing": "Preserve station ID, timestamp basis, QC flags, and missing-data treatment. Interpolate using a documented event window and method."
+    },
+    {
+      "id": "asos_aws_normals_1991_2020",
+      "role": "meteorology_source_normals",
+      "path": "meteorology/climatology_1991_2020/",
+      "status": "requires_user_download",
+      "official_source": "https://data.kma.go.kr/data/grnd/selectAsosList.do?pgmNo=36",
+      "access_note": "ASOS file-set catalog verifies long-period coverage, but station/element availability, account access, and usage conditions must be checked at download.",
+      "required_processing": "Record element-specific coverage, station history, quality controls, aggregation and climatology formula."
+    },
+    {
+      "id": "burn_perimeter_2025",
+      "role": "validation_label",
+      "path": "burn_perimeter/",
+      "status": "required_not_available",
+      "required_metadata": ["provenance", "event_date_range", "burned_area_definition", "created_date", "method", "CRS", "geometry_validation", "license"],
+      "required_processing": "Reproject to EPSG:5186 and rasterize to common grids only after validation. A reconstructed news-based polygon is prohibited for definitive validation."
+    },
+    {
+      "id": "derived_factor_and_fvi_rasters",
+      "role": "analysis_inputs_and_baseline_output",
+      "path": "derived_inputs/30m_epsg5186/",
+      "status": "required_not_available",
+      "required_files": ["topography.tif", "meteorology.tif", "fuel.tif", "burn_label_30m.tif", "scenario_01_fvi.tif"],
+      "required_processing": "All GeoTIFFs must be co-registered in EPSG:5186 at 30 m; factors must be 0–100; burn label must contain both 0 and 1."
+    },
+    {
+      "id": "kffdrs_or_fwi",
+      "role": "comparative_validation",
+      "path": "comparison_kffdrs_fwi/",
+      "status": "source_access_documented",
+      "official_source": "https://forestfire.nifos.go.kr/sys/spd/srchPastDataList.do?searchType=obs",
+      "verified_access": "Official historical current-analysis and forecast ZIP endpoints supplied non-georeferenced PNG maps for 2025-03-25 when checked on 2026-09-18.",
+      "limitation": "PNG map images lack documented georeferencing and cell values; they must not be treated as quantitative KFFDRS/FWI rasters or used for ROC/AUC.",
+      "required_processing": "Obtain licensed source grids or reproduce an index using documented input data, then align to the same event period, extent, CRS, and evaluation sample as FVI."
+    }
+  ],
+  "integrity": {
+    "checksum_file": "dem/srtm_1arcsec/SHA256SUMS.txt",
+    "verified_checks": ["gzip -t passed for both included HGT files", "uncompressed HGT byte count was 25,934,402 for each tile"],
+    "results_note": "Repository results remain explicitly not_executed until every required empirical input is restored, documented, and processed."
+  }
+}

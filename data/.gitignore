@@ -1,0 +1,32 @@
+# Licensed, access-controlled, personally identifiable, or large inputs: keep outside normal Git.
+# Commit only provenance metadata, checksums, and documentation unless redistribution is expressly permitted.
+
+landcover/*
+!landcover/SOURCE_REQUIRED.md
+!landcover/README.md
+
+meteorology/event_2025/*
+!meteorology/event_2025/SOURCE_REQUIRED.md
+!meteorology/event_2025/provenance_template.json
+meteorology/climatology_1991_2020/*
+!meteorology/climatology_1991_2020/SOURCE_REQUIRED.md
+!meteorology/climatology_1991_2020/provenance_template.json
+
+burn_perimeter/*
+!burn_perimeter/SOURCE_REQUIRED.md
+!burn_perimeter/provenance_template.json
+
+comparison_kffdrs_fwi/*.zip
+comparison_kffdrs_fwi/*.png
+comparison_kffdrs_fwi/*.tif
+!comparison_kffdrs_fwi/SOURCE_REQUIRED.md
+!comparison_kffdrs_fwi/download_kffdrs_reference_images.sh
+
+derived_inputs/30m_epsg5186/*
+!derived_inputs/30m_epsg5186/SOURCE_REQUIRED.md
+!derived_inputs/30m_epsg5186/provenance_template.json
+
+# Never commit temporary downloads or browser/session artifacts.
+*.part
+*.tmp
+*.log
