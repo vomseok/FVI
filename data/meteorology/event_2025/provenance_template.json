@@ -1,0 +1,17 @@
+{
+  "asset_id": "asos_aws_event_2025",
+  "status": "template_do_not_treat_as_data",
+  "source_agency": "Korea Meteorological Administration",
+  "source_portal_url": "https://data.kma.go.kr/data/grnd/selectAsosRltmList.do",
+  "retrieved_at_utc": null,
+  "license_or_terms_reviewed": null,
+  "event_window": {"timezone": "KST", "start": null, "end": null},
+  "stations": [
+    {"station_id": null, "station_name": null, "latitude": null, "longitude": null, "elevation_m": null, "network": "ASOS or AWS"}
+  ],
+  "variables": ["temperature", "relative_humidity", "wind_speed", "wind_direction", "precipitation"],
+  "raw_files": [{"path": null, "sha256": null, "row_count": null}],
+  "quality_control": {"qc_flag_fields_preserved": true, "excluded_flag_values": [], "missing_data_rule": null},
+  "spatialization": {"temporal_aggregation": null, "method": null, "search_radius_m": null, "elevation_correction": null},
+  "notes": null
+}
