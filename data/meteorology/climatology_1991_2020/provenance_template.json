@@ -1,0 +1,15 @@
+{
+  "asset_id": "asos_aws_normals_1991_2020",
+  "status": "template_do_not_treat_as_data",
+  "source_agency": "Korea Meteorological Administration",
+  "source_portal_url": "https://data.kma.go.kr/data/grnd/selectAsosList.do?pgmNo=36",
+  "retrieved_at_utc": null,
+  "license_or_terms_reviewed": null,
+  "period": {"start": "1991-01-01", "end": "2020-12-31", "timezone": "KST"},
+  "data_basis": "raw_observations_or_official_normals",
+  "stations": [{"station_id": null, "station_name": null, "network": "ASOS or AWS", "available_period": null, "relocation_or_instrument_notes": null}],
+  "variables": [{"name": null, "unit": null, "aggregation": null, "quality_control_rule": null}],
+  "raw_or_statistical_files": [{"path": null, "sha256": null}],
+  "normal_calculation": {"formula": null, "minimum_completeness_rule": null, "spatialization_method": null},
+  "notes": null
+}
