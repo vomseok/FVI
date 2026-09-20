@@ -1,0 +1,22 @@
+{
+  "asset_id": "derived_fvi_inputs_2025",
+  "status": "template_do_not_treat_as_data",
+  "target_crs": "EPSG:5186",
+  "target_resolution_m": 30,
+  "common_grid": {"transform": null, "width": null, "height": null, "extent": null},
+  "source_assets": [
+    {"asset_id": "dem", "path": null, "sha256": null},
+    {"asset_id": "landcover", "path": null, "sha256": null},
+    {"asset_id": "event_meteorology", "path": null, "sha256": null},
+    {"asset_id": "burn_perimeter", "path": null, "sha256": null}
+  ],
+  "factor_derivations": {
+    "topography": {"formula": null, "normalization": null, "output_path": "topography.tif", "sha256": null, "valid_min": null, "valid_max": null, "valid_cells": null},
+    "meteorology": {"formula": null, "event_window": null, "interpolation": null, "normalization": null, "output_path": "meteorology.tif", "sha256": null, "valid_min": null, "valid_max": null, "valid_cells": null},
+    "fuel": {"landcover_version": null, "fuel_score_config_sha256": null, "rasterization": null, "normalization": null, "output_path": "fuel.tif", "sha256": null, "valid_min": null, "valid_max": null, "valid_cells": null}
+  },
+  "burn_label": {"source": null, "rasterization_rule": null, "output_path": "burn_label_30m.tif", "sha256": null, "burned_cells": null, "unburned_cells": null},
+  "scenario_01_fvi": {"scenario_config_sha256": null, "output_path": "scenario_01_fvi.tif", "sha256": null, "execution_command": null},
+  "software": {"python": null, "rasterio": null, "geopandas": null, "scikit_learn": null},
+  "created_at_utc": null
+}
