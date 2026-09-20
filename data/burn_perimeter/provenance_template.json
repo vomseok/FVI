@@ -1,0 +1,17 @@
+{
+  "asset_id": "burn_perimeter_2025",
+  "status": "template_do_not_treat_as_data",
+  "source_agency": null,
+  "source_url": null,
+  "retrieved_at_utc": null,
+  "license_or_terms_reviewed": null,
+  "event_name": "March 2025 Gyeongsangbuk-do wildfire",
+  "event_date_range": {"start": null, "end": null, "timezone": "KST"},
+  "burned_area_definition": null,
+  "creation_date": null,
+  "method": {"source_type": "official_survey_or_validated_remote_sensing", "sensor_or_survey": null, "classification_or_delineation_rule": null, "independent_validation": null},
+  "original_file": {"path": "burn_perimeter.gpkg", "sha256": null, "original_crs": null, "reported_area_ha": null},
+  "geometry_quality_control": {"valid_geometry_check": null, "empty_features": null, "duplicate_features": null, "area_after_reprojection_ha": null},
+  "redistribution_allowed": null,
+  "notes": null
+}
