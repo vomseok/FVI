@@ -1,0 +1,10 @@
+{
+  "crs": "EPSG:5186",
+  "resolution_m": 30,
+  "width": 3233,
+  "height": 3033,
+  "origin_top_left": [326000.0, 481000.0],
+  "extent_5186": {"xmin":326000,"ymin":390010,"xmax":422990,"ymax":481000},
+  "n_cells": 9805689,
+  "note": "Analysis grid identical to the manuscript (3233 x 3033 = 9,805,689 cells)."
+}

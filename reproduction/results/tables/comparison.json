@@ -1,0 +1,7 @@
+{
+  "FVI (full, AHP)": 0.712,
+  "Fuel only": 0.725,
+  "Topography only": 0.605,
+  "Meteorology only": 0.398,
+  "Canadian FWI (met-based)": 0.365
+}

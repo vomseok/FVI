@@ -1,0 +1,23 @@
+class_code,class_name_ko,class_name_en,flammability_0_100,basis
+110,주거지역,Residential,40,manuscript Table 1
+120,공업지역,Industrial,15,low surface fuel
+130,상업지역,Commercial,15,low surface fuel
+140,위락시설지역,Recreational,20,mixed managed
+150,교통지역,Transportation,10,firebreak (manuscript)
+160,공공시설지역,Public facility,20,mixed impervious
+210,논,Rice paddy,30,high moisture (manuscript)
+220,밭,Field crop,55,agri residue (manuscript)
+230,시설재배지,Greenhouse/facility,25,managed discontinuous
+240,과수원,Orchard,45,woody agri
+250,기타재배지,Other cultivated,45,mixed cultivated
+310,활엽수림,Broadleaf forest,60,litter fuel (manuscript)
+320,침엽수림,Coniferous forest,100,resin/crown-fire (manuscript)
+330,혼효림,Mixed forest,80,intermediate (manuscript)
+410,자연초지,Natural grassland,70,cured fine fuel (manuscript)
+420,인공초지,Managed grassland,50,managed herbaceous (manuscript)
+510,내륙습지,Inland wetland,5,moist (manuscript)
+520,연안습지,Coastal wetland,5,moist saline
+610,자연나지,Natural bare,20,sparse fuel
+620,인공나지,Artificial bare,15,mineral surface
+710,내륙수,Inland water,0,firebreak (manuscript)
+720,해양수,Sea water,0,firebreak

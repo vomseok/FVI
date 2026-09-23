@@ -1,0 +1,8 @@
+{
+  "method": "Analytic Hierarchy Process (single-expert pairwise, Saaty scale)",
+  "top_level": {"topography":0.30,"meteorology":0.30,"fuel":0.40,
+    "pairwise": {"fuel_vs_topography":1.333,"fuel_vs_meteorology":1.333,"topography_vs_meteorology":1.0},
+    "CR":0.000},
+  "topography_sub": {"slope":0.50,"aspect":0.30,"elevation":0.20,"CR":0.000},
+  "meteorology_sub": {"effective_humidity":0.40,"wind_speed":0.40,"temperature":0.20,"CR":0.000}
+}

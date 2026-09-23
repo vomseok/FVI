@@ -1,0 +1,15 @@
+{
+  "burn_source": "Sentinel-2 L2A dNBR (pre 2025-03-14, post 2025-04-08), B08/B12, Key&Benson severity, dNBR>=270 core + connected-components >=9 ha",
+  "covered_area_ha": 539192,
+  "burn_perimeter_ha": 61637,
+  "fvi_natural_breaks_GVF": 0.9450,
+  "roc_auc": 0.712,
+  "auc_pr": 0.192,
+  "youden_threshold": 57.1,
+  "sensitivity": 0.795,
+  "specificity": 0.533,
+  "grades45_burn_share_pct": 79.9,
+  "grades45_area_pct": 50.9,
+  "concentration_monotonic": [0.07,0.18,0.68,1.32,1.85],
+  "note": "Re-analysis from real source data; supersedes the manuscript's press-based validation (AUC 0.602). New results are stronger."
+}

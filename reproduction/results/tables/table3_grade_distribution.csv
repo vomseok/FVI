@@ -1,0 +1,6 @@
+grade,name,fvi_low,fvi_high,area_pct
+1,Very Low,3.1,31.5,10.2
+2,Low,31.5,45.7,13.8
+3,Moderate,45.7,56.9,25.7
+4,High,56.9,67.2,27.4
+5,Very High,67.2,92.6,22.9

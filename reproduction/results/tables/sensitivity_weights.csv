@@ -1,0 +1,4 @@
+scenario,topo,met,fuel,auc,youden_thr,sensitivity,specificity
+base,0.30,0.30,0.40,0.712,57.1,0.795,0.533
+terrain_weather,0.35,0.35,0.30,0.693,53.6,0.823,0.484
+fuel_emphasis,0.25,0.25,0.50,0.721,63.3,0.712,0.634

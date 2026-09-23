@@ -1,0 +1,5 @@
+forest_type,area_ha,burned_ha,burn_rate_pct,mean_dNBR,damage_share_pct
+Coniferous,174476,38308,22.0,165,62.1
+Mixed,48826,7603,15.6,98,12.3
+Broadleaf,143672,12230,8.5,34,19.8
+Non-forest,172218,3497,2.0,-7,5.7
